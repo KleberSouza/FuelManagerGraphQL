@@ -17,5 +17,13 @@
         {
             return _context.Consumos;
         }
+
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Usuario> Usuarios([Service] AppDbContext _context)
+        {
+            return _context.Usuarios;
+        }
     }
 }
